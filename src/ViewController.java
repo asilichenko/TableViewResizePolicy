@@ -70,8 +70,7 @@ public class ViewController implements Initializable {
     }
 
     private void placeLine(Line line, double colWidth, int offset) {
-        line.setStartX(staticCol.getWidth() + colWidth * offset);
-        line.setEndX(line.getStartX());
+        line.setLayoutX(staticCol.getWidth() + colWidth * offset);
     }
 
     /**

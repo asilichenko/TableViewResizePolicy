@@ -34,9 +34,9 @@
     </TableView>
 
     <Line fx:id="l1" endY="100" style="-fx-stroke: gray;" />
-    <Line fx:id="l2" endX="10" endY="100" startX="10" style="-fx-stroke: gray;" />
-    <Line fx:id="l3" endX="20" endY="100" startX="20" style="-fx-stroke: gray;" />
-    <Line fx:id="l4" endX="30" endY="100" startX="30" style="-fx-stroke: gray;" />
+    <Line fx:id="l2" endY="100" style="-fx-stroke: gray;" />
+    <Line fx:id="l3" endY="100" style="-fx-stroke: gray;" />
+    <Line fx:id="l4" endY="100" style="-fx-stroke: gray;" />
     <HBox alignment="CENTER" layoutY="286.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <padding>
             <Insets bottom="10.0" />
