@@ -33,10 +33,11 @@
         </columns>
     </TableView>
 
-    <Line fx:id="l1" endY="100" style="-fx-stroke: gray;" />
-    <Line fx:id="l2" endY="100" style="-fx-stroke: gray;" />
-    <Line fx:id="l3" endY="100" style="-fx-stroke: gray;" />
-    <Line fx:id="l4" endY="100" style="-fx-stroke: gray;" />
+    <Line fx:id="l1" endY="100" layoutX="68" style="-fx-stroke: gray;" />
+    <Line fx:id="l2" endY="100" layoutX="128" style="-fx-stroke: gray;" />
+    <Line fx:id="l3" endY="100" layoutX="228" style="-fx-stroke: gray;" />
+    <Line fx:id="l4" endY="100" layoutX="328" style="-fx-stroke: gray;" />
+
     <HBox alignment="CENTER" layoutY="286.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <padding>
             <Insets bottom="10.0" />
