@@ -15,7 +15,20 @@ import java.util.ResourceBundle;
  */
 public class ViewController implements Initializable {
 
+    private static final int STATIC_COLS_NUMBER = 1;
     private static final int RIGHT_PADDING = 10;
+
+    private static final int GROUP1_SIZE = 1;
+    private static final int GROUP2_SIZE = 3;
+    private static final int GROUP3_SIZE = 5;
+    private static final int GROUP4_SIZE = 5;
+    private static final int GROUP5_SIZE = 3;
+
+    private static final int GROUP1_OFFSET = 0;
+    private static final int GROUP2_OFFSET = GROUP1_SIZE;
+    private static final int GROUP3_OFFSET = GROUP2_OFFSET + GROUP2_SIZE;
+    private static final int GROUP4_OFFSET = GROUP3_OFFSET + GROUP3_SIZE;
+    private static final int GROUP5_OFFSET = GROUP4_OFFSET + GROUP4_SIZE;
 
     @FXML
     private AnchorPane root;
@@ -38,19 +51,19 @@ public class ViewController implements Initializable {
         final double padding = staticCol.getWidth() + RIGHT_PADDING;
         table.setColumnResizePolicy(param -> {
             final double totalWidth = table.getWidth() - padding;
-            final double colWidth = totalWidth / (table.getColumns().size() - 1);
+            final double colWidth = totalWidth / (table.getColumns().size() - STATIC_COLS_NUMBER);
 
-            placeLine(l1, colWidth, 1);
-            placeLine(l2, colWidth, 4);
-            placeLine(l3, colWidth, 9);
-            placeLine(l4, colWidth, 14);
+            placeLine(l1, colWidth, GROUP2_OFFSET);
+            placeLine(l2, colWidth, GROUP3_OFFSET);
+            placeLine(l3, colWidth, GROUP4_OFFSET);
+            placeLine(l4, colWidth, GROUP5_OFFSET);
 
             double sum = 0;
-            sum = resize(colWidth, sum, 0, 1);
-            sum = resize(colWidth, sum, 1, 3);
-            sum = resize(colWidth, sum, 4, 5);
-            sum = resize(colWidth, sum, 9, 5);
-            resize(colWidth, sum, 14, 3);
+            sum = resize(colWidth, sum, GROUP1_OFFSET, GROUP1_SIZE);
+            sum = resize(colWidth, sum, GROUP2_OFFSET, GROUP2_SIZE);
+            sum = resize(colWidth, sum, GROUP3_OFFSET, GROUP3_SIZE);
+            sum = resize(colWidth, sum, GROUP4_OFFSET, GROUP4_SIZE);
+            resize(colWidth, sum, GROUP5_OFFSET, GROUP5_SIZE);
 
             return true;
         });
